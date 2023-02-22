@@ -10,6 +10,7 @@ class AppRoute {
     PageFamily.nameRoute: (context) => const PageFamily(),
     FamilyProfile.nameRoute: (context) => const FamilyProfile(),
     UserPage.nameRoute: (context) => const UserPage(),
+    ProfileResident.nameRoute: (context) => const ProfileResident(),
   };
   static String get initialRoute => PageSplash.nameRoute;
 

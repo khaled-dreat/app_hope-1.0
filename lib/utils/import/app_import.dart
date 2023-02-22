@@ -71,3 +71,4 @@ part "../../view/user/body_user/user_list_view.dart";
 part '../../view/user/body_user/user_card_design.dart';
 part '../../view/home/widgets/drawer/drawer_setting/lang/drawer_lang.dart';
 part '../../view/widgets/tost/app_tost.dart';
+part "../../view/resident/profile/profile.dart";
