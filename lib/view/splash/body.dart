@@ -14,6 +14,13 @@ class _PageSplashState extends State<PageSplash> {
     Timer(const Duration(seconds: 3), () {
       AppRoute.goAndRemove(context, HomePage.nameRoute);
     });
+    Future.delayed(
+      Duration.zero,
+      () {
+        ControllerApi pApi = Provider.of<ControllerApi>(context, listen: false);
+        pApi.initRequest(context);
+      },
+    );
   }
 
   @override

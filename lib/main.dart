@@ -19,5 +19,8 @@ void main(List<String> args) async {
 List<SingleChildWidget> providers = [
   ChangeNotifierProvider(
     create: (_) => ControllerLang(),
+  ),
+  ChangeNotifierProvider(
+    create: (_) => ControllerApi(),
   )
 ];

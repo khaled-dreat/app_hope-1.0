@@ -9,7 +9,7 @@ class BodyUser extends StatelessWidget {
       const SearchBar(),
       SizedBox(
         height: (AppDime.fullwidth(context) * 1.615),
-        child: const UserListViewBuilder(),
+        child: const User(),
       ),
     ]);
   }

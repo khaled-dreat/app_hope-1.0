@@ -9,6 +9,11 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+//*********As & Show********** */
+import 'package:http/http.dart' as http;
+import "dart:convert" as convert;
+import 'dart:developer' as div;
+
 //*********App Start ********** */
 
 part '../../app_start/app_hope.dart';
@@ -23,7 +28,7 @@ part "../../view/family/body.dart";
 part '../../view/user/body.dart';
 
 // ? ************Controller********** */
-
+part "../../controller/c_api.dart";
 part "../../controller/c_lang.dart";
 
 // ? ************Utils********** */
@@ -53,9 +58,7 @@ part '../../view/home/widgets/body_home/counting/counting.dart';
 part '../../view/resident/resident_card_design.dart';
 part '../../view/resident/resident_body.dart';
 part '../../view/user/profile/profile.dart';
-part '../../view/user/profile/outline_painter_profile.dart';
-part "../../view/user/profile/listDetailsOFProfile.dart";
-part '../../view/user/profile/header_profile.dart';
+part '../../view/user/profile/design_card_contact_details.dart';
 part '../../view/invoise/card_design_invoise.dart';
 part "../../view/invoise/history_pay.dart";
 part '../../view/family/family_body/family_card_design.dart';
@@ -72,3 +75,17 @@ part '../../view/user/body_user/user_card_design.dart';
 part '../../view/home/widgets/drawer/drawer_setting/lang/drawer_lang.dart';
 part '../../view/widgets/tost/app_tost.dart';
 part "../../view/resident/profile/profile.dart";
+part '../../view/user/body_user/user.dart';
+part '../../view/widgets/error/error_text.dart';
+part '../../view/user/profile/design_card_details.dart';
+
+//*********Model ********** */
+part '../../model/users/m_users_app.dart';
+part "../../model/users/m_users.dart";
+part '../../model/users/user_details/m_user_details_app.dart';
+part '../../model/users/user_details/m_user_details.dart';
+
+// ? ************Api********** */
+part '../../api/api_key.dart';
+part "../../api/api_handle.dart";
+part '../../api/api_end_point.dart';

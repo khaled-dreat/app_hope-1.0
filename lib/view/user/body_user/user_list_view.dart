@@ -5,13 +5,17 @@ class UserListViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ControllerApi pApi = Provider.of<ControllerApi>(context);
+    List<ModelUserApp> data = pApi.dataUsers!.listUser!;
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: 10,
+      itemCount: pApi.dataUsers!.listUser!.length,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
-            child: const UserCardDesIgn());
+            child: UserCardDesIgn(
+              datauser: data.elementAt(index),
+            ));
       },
     );
   }
