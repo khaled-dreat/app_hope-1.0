@@ -77,7 +77,7 @@ part '../../view/widgets/tost/app_tost.dart';
 part "../../view/resident/profile/profile.dart";
 part '../../view/user/body_user/user.dart';
 part '../../view/widgets/error/error_text.dart';
-part '../../view/user/profile/design_card_details.dart';
+//part '../../view/user/profile/design_card_details.dart';
 
 //*********Model ********** */
 part '../../model/users/m_users_app.dart';

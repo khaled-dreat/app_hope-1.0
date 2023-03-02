@@ -7,10 +7,15 @@ class ControllerApi extends ChangeNotifier {
     notifyListeners();
   }
 
+  bool loadingDetails = false;
+  set changeLoadingDetails(bool value) {
+    loadingDetails = value;
+    notifyListeners();
+  }
+
   //***********initRequest******* */
   void initRequest(BuildContext context) {
     fetchDataUsers(context);
-    //   fetchDataUsersDetails(context,id);
   }
 
   //***********Users */
@@ -23,9 +28,9 @@ class ControllerApi extends ChangeNotifier {
   }
 
   ModelUserDetails? dataUsersDetails;
-  Future<void> fetchDataUsersDetails(BuildContext context, id) async {
-    changeLoading = true;
+  Future<void> fetchDataUsersDetails(BuildContext context, String id) async {
+    loadingDetails = true;
     dataUsersDetails = await ApiEndPoint().getUserDetails(context, id);
-    changeLoading = false;
+    loadingDetails = false;
   }
 }

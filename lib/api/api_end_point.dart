@@ -5,7 +5,6 @@ class ApiEndPoint extends ApiHandle {
       Uri(scheme: ApiKey.http, host: ApiKey.host, path: ApiKey.pathUsers);
   int timeout = 100;
 
-// http://localhost/TestApiHope/emp.php
   @override
   Future getUsers(BuildContext context) async {
     try {
@@ -19,8 +18,6 @@ class ApiEndPoint extends ApiHandle {
         return null;
       }
     } catch (error) {
-      print(urlEmp);
-
       div.log('Error Fetch Data User',
           name: 'Api User', error: error.toString());
       return null;
@@ -29,12 +26,8 @@ class ApiEndPoint extends ApiHandle {
 
   @override
   Future getUserDetails(BuildContext context, id) async {
-    Uri urlUserDetails = Uri.http(
-        '192.168.1.153', "TestApiHope/user/details_user.php", {"id": id});
-    // http://localhost/TestApiHope/user/details_user.php?id=1
-
-    print(urlUserDetails);
-
+    Uri urlUserDetails =
+        Uri.http(ApiKey.host, ApiKey.pathUserDetails, {"id": id});
     try {
       http.Response res =
           await http.get(urlUserDetails).timeout(Duration(seconds: timeout));
@@ -47,8 +40,6 @@ class ApiEndPoint extends ApiHandle {
         return null;
       }
     } catch (error) {
-      print(urlUserDetails);
-
       div.log('Error Fetch Data User',
           name: 'Api User Details', error: error.toString());
       return null;

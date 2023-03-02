@@ -15,6 +15,5 @@ class ApiKey {
   static String http = 'http';
   static String pathUsers = '/TestApiHope/user/emp.php';
   static String host = '192.168.1.153';
-  static String pathUserDetails = '/TestApiHopeuser/details_user.php';
-  // http://localhost/TestApiHope/user/details_user.php?id=2
+  static String pathUserDetails = "TestApiHope/user/details_user.php";
 }

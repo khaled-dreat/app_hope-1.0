@@ -4,7 +4,6 @@ class AppRoute {
   static Map<String, WidgetBuilder> routes = {
     PageSplash.nameRoute: (context) => const PageSplash(),
     HomePage.nameRoute: (context) => const HomePage(),
-    ProfilePage.nameRoute: (context) => const ProfilePage(),
     ResidentPage.nameRoute: (context) => const ResidentPage(),
     InvoisePage.nameRoute: (context) => const InvoisePage(),
     PageFamily.nameRoute: (context) => const PageFamily(),
@@ -24,5 +23,11 @@ class AppRoute {
 
   static void goBack(BuildContext context) {
     Navigator.pop(context);
+  }
+
+  static void goMaterial(BuildContext context, Widget page) {
+    MaterialPageRoute<Widget> route =
+        MaterialPageRoute(builder: (context) => page);
+    Navigator.push(context, route);
   }
 }
