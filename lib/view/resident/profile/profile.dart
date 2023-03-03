@@ -3,6 +3,7 @@ part of "../../../utils/import/app_import.dart";
 class ProfileResident extends StatelessWidget {
   const ProfileResident({super.key});
   static String nameRoute = "ProfileEmp";
+  //todo:Refactor for this page
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -22,7 +23,6 @@ class ProfileResident extends StatelessWidget {
                           margin: EdgeInsets.all(15.r),
                           width: AppDime.fullwidth(context),
                           height: 120.h,
-                          //       color: Colors.amber,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +62,7 @@ class ProfileResident extends StatelessWidget {
                       ),
                       40.verticalSpace,
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Column(
                             children: [
@@ -84,6 +84,7 @@ class ProfileResident extends StatelessWidget {
                                   style: TextStyle(
                                     color: Colors.grey,
                                   )),
+                              4.verticalSpace,
                               Text("000000000",
                                   style: TextStyle(fontSize: 20.sp)),
                             ],

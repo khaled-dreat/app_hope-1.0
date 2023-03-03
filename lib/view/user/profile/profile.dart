@@ -24,7 +24,6 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     ControllerApi pApi = Provider.of<ControllerApi>(context);
-
     ModelUserDetailsApp? data = pApi.dataUsersDetails?.userDetails;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
@@ -38,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 loading: LoadingType.page,
               ),
             )
-          : data != null
+          : (pApi.dataUsersDetails?.userDetails != null)
               ? Stack(children: [
                   Column(
                     children: [

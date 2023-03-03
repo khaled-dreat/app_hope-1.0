@@ -1,8 +1,9 @@
 part of '../../utils/import/app_import.dart';
 
 class ResidentCardDesign extends StatelessWidget {
-  const ResidentCardDesign({super.key, this.gendaer});
+  const ResidentCardDesign({super.key, this.gendaer, required this.data});
   final bool? gendaer;
+  final ModelResidentsApp? data;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -12,7 +13,7 @@ class ResidentCardDesign extends StatelessWidget {
       child: Card(
         child: ListTile(
           trailing: const Icon(Icons.chevron_right),
-          title: Text(ApplangKey.yazanAbdAlghani.tr()),
+          title: Text("${data?.name}"),
           subtitle: Text("77 ${ApplangKey.year.tr()}"),
           leading: SvgPicture.asset(
             AppIcons.resident,

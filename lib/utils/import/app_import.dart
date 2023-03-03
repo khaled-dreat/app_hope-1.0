@@ -77,14 +77,15 @@ part '../../view/widgets/tost/app_tost.dart';
 part "../../view/resident/profile/profile.dart";
 part '../../view/user/body_user/user.dart';
 part '../../view/widgets/error/error_text.dart';
-//part '../../view/user/profile/design_card_details.dart';
+part '../../view/user/profile/design_card_details.dart';
 
 //*********Model ********** */
 part '../../model/users/m_users_app.dart';
 part "../../model/users/m_users.dart";
 part '../../model/users/user_details/m_user_details_app.dart';
 part '../../model/users/user_details/m_user_details.dart';
-
+part '../../model/residents/m_residents_app.dart';
+part '../../model/residents/m_residents.dart';
 // ? ************Api********** */
 part '../../api/api_key.dart';
 part "../../api/api_handle.dart";

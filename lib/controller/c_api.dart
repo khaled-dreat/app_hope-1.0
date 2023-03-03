@@ -16,6 +16,7 @@ class ControllerApi extends ChangeNotifier {
   //***********initRequest******* */
   void initRequest(BuildContext context) {
     fetchDataUsers(context);
+    fetchDataResidents(context);
   }
 
   //***********Users */
@@ -32,5 +33,20 @@ class ControllerApi extends ChangeNotifier {
     loadingDetails = true;
     dataUsersDetails = await ApiEndPoint().getUserDetails(context, id);
     loadingDetails = false;
+    notifyListeners();
+  }
+
+  bool loadingResidents = false;
+  set changeLoadingResidents(bool value) {
+    loadingResidents = value;
+    notifyListeners();
+  }
+
+  ModelResidents? dataResidents;
+  Future<void> fetchDataResidents(BuildContext context) async {
+    loadingResidents = true;
+    dataResidents = await ApiEndPoint().getResidents(context);
+    loadingResidents = false;
+    notifyListeners();
   }
 }

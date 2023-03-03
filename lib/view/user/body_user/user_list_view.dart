@@ -9,7 +9,7 @@ class UserListViewBuilder extends StatelessWidget {
     List<ModelUserApp> data = pApi.dataUsers!.listUser!;
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: pApi.dataUsers!.listUser!.length,
+      itemCount: data.length,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),

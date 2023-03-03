@@ -5,12 +5,16 @@ class ResidentGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ControllerApi pApi = Provider.of<ControllerApi>(context);
+    List<ModelResidentsApp>? data = pApi.dataResidents?.listResidents;
     return Expanded(
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 15,
+        itemCount: data?.length,
         itemBuilder: (BuildContext context, int index) {
-          return const ResidentCardDesign();
+          return ResidentCardDesign(
+            data: data?.elementAt(index),
+          );
         },
       ),
     );

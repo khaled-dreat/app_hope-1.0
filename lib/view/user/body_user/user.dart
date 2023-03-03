@@ -6,7 +6,7 @@ class User extends StatefulWidget {
   @override
   State<User> createState() => _UserState();
 
-  toJson() {}
+  // toJson() {}
 }
 
 class _UserState extends State<User> {
